@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    transition: .2s ease-in-out;
+    background-color: #252525;
+    line-height: 1.2;
+}
+h1{
+    font-size: 4rem;
+    color: #252525;
+    opacity: 0;
+    display: inline-block;
+    background-color: #a5a5a5;
+    padding: 27px;
+    transform: translateY(0);
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.newYear{
+    position: relative;
+    transform: translateY(0);
+    opacity: 0;
+    letter-spacing: -16px;
+    color: #a5a5a5;
+}
+.newYear span{
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.red{
+    background-color: rgb(241, 57, 57);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index:1;
+}
+.blue{
+    width: 0;
+    height: 1800px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    background-color: #3d3dd2;
+    transform: translate(-50%, -50%) rotate(66deg);
+    box-shadow: inset 0 15px 66px rgba(37, 37, 37, 1), inset 0 15px 66px rgba(37, 37, 37, 1);
+    border: 1px solid #171717;
+}
+.countdown{
+    z-index: 1;
+    color: #a5a5a5;
+    display: flex;
+}
+.countdown div{
+    margin: 0 20px;
+    font-size: 3rem;
+    background-color: #252525;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    opacity: 0;
+}
+.countdown #day,
+.countdown #Minute{
+    top: 50px;
+}
+.countdown #Hour,
+.countdown #Second{
+    top: -50px;
+}
+.countdown div:after{
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+}
+.countdown #day:after{
+    content:'Days';
+}
+.countdown #Hour:after{
+    content:'Hours';
+}
+.countdown #Minute:after{
+    content:'Minutes';
+}
+.countdown #Second:after{
+    content:'Seconds';
+}
